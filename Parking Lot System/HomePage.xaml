@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parking_Lot_System.HomePage"
+             Title=""
+             Shell.TabBarIsVisible="True"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="WhiteSmoke">
+
+    <ScrollView>
+
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto"
+              ColumnDefinitions=".50*, .50*"
+              RowSpacing="40"
+              ColumnSpacing="40"
+              Padding="20">
+
+            <Label Text="Vehicle Parking Guide System"
+                   SemanticProperties.HeadingLevel="Level1"
+                   Grid.RowSpan="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalTextAlignment="Center"
+                   Margin="0, 0, 0, 20"
+                   FontSize="35"
+                   FontAttributes="Bold"
+                   TextColor="#b44cc7"/>
+
+            <!-- Slot 1 -->
+            <Frame Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"
+                   Padding="20"
+                   BackgroundColor="#b44cc7"    
+                BorderColor="White"
+               
+                CornerRadius="10"
+               
+                HasShadow="True"
+                   Margin="0">
+                <VerticalStackLayout 
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+                    <Grid HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Image Source="p.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="-90"
+                               IsVisible="True"
+                               x:Name="img_p_1"/>
+                        <Image Source="car.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="-90"
+                               x:Name="img_car_1"
+                               IsVisible="False"/>
+                    </Grid>
+                    <Label Text="Slot 1"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="End"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Slot 2 -->
+            <Frame Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"
+                   Padding="20"
+                   BackgroundColor="#b44cc7"    
+                BorderColor="White"
+              
+                CornerRadius="10"
+                
+                HasShadow="True"
+                   Margin="0">
+                <VerticalStackLayout 
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+                    <Grid HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Image Source="p.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="90"
+                               IsVisible="True"
+                               x:Name="img_p_2"/>
+                        <Image Source="car.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="90"
+                               IsVisible="False"
+                               x:Name="img_car_2"/>
+                    </Grid>
+                    <Label Text="Slot 2"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="End"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Slot 3 -->
+            <Frame Grid.Row="2"
+                   Grid.Column="0"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"
+                   Padding="20"
+                   BackgroundColor="#b44cc7"    
+                BorderColor="White"
+               
+                CornerRadius="10"
+                
+                HasShadow="True"
+                   Margin="0">
+                <VerticalStackLayout 
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+                    <Grid HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Image Source="p.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="-90"
+                               IsVisible="True"
+                               x:Name="img_p_3"/>
+                        <Image Source="car.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="-90"
+                               IsVisible="False"
+                               x:Name="img_car_3"/>
+                    </Grid>
+                    <Label Text="Slot 3"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="End"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Slot 4 -->
+            <Frame Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"
+                   Padding="20"
+                   BackgroundColor="#b44cc7"    
+                BorderColor="White"
+                
+                CornerRadius="10"
+                
+                HasShadow="True"
+                   Margin="0">
+                <VerticalStackLayout 
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+                    <Grid HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Image Source="p.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="90"
+                               IsVisible="True"
+                               x:Name="img_p_4"/>
+                        <Image Source="car.png"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Rotation="90"
+                               IsVisible="False"
+                               x:Name="img_car_4"/>
+                    </Grid>
+                    <Label Text="Slot 4"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="End"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:Parking_Lot_System.Classes"
+             x:Class="Parking_Lot_System.Statistics"
+             Title=""
+             xmlns:charts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             BackgroundColor="WhiteSmoke"
+             Shell.NavBarIsVisible="True"
+             Shell.TabBarIsVisible="True">
+    <ScrollView>
+        <Grid
+            RowDefinitions="Auto, Auto, Auto"
+            ColumnDefinitions=".50*, .50*"
+            RowSpacing="20"
+            ColumnSpacing="20"
+            Padding="20">
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="5"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="0">
+                <Grid
+                    ColumnDefinitions=".10*, .30*, .60*"
+                    Padding="0"
+                    ColumnSpacing="10">
+                    <BoxView
+                        BackgroundColor="MediumPurple"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Column="0"/>
+                    <Image
+                        Source="pc.png"
+                        Grid.Column="1"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        MaximumHeightRequest="50"
+                        MaximumWidthRequest="50"/>
+                    <VerticalStackLayout
+                        Grid.Column="2"
+                        Padding="10,20,10,20"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Label
+                            Text="Total Park"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            TextColor="Gray"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 0, 0, 0"/>
+                        <Label 
+                            x:Name="total_parking"
+                            Text="0"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            
+            
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="5"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Grid.Row="0"
+                Grid.Column="1"
+                Padding="0">
+                <Grid
+                    ColumnDefinitions=".10*, .30*, .60*"
+                    Padding="0"
+                    ColumnSpacing="10">
+                    <BoxView
+                        BackgroundColor="#b380cc"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Column="0"/>
+                    <Image
+                        Source="gar_car.png"
+                        Grid.Column="1"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        MaximumHeightRequest="50"
+                        MaximumWidthRequest="50"/>
+                    <VerticalStackLayout
+                        Grid.Column="2"
+                        Padding="10,20,10,20"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Label
+                            Text="Total Parkings Today"
+                            FontSize="10"
+                            FontAttributes="Bold"
+                            TextColor="Gray"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="0, 0, 0, 0"/>
+                        <Label 
+                            x:Name="total_parkings_today"
+                            Text="0"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            <!-- Header Table -->
+            <Label
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Text="Total Parks Monthly"
+                HorizontalOptions="Center"
+                FontSize="25"
+                FontAttributes="Bold"
+                Margin="0, 20, 0, 0"/>
+            
+            <!-- Table Month Parkings -->
+            <Frame
+                 BackgroundColor="White"
+                 CornerRadius="5"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 Padding="0">
+                <Grid
+                    RowDefinitions="Auto"
+                    ColumnDefinitions=".60*, .40*"
+                    Padding="0"
+                    ColumnSpacing="0"
+                    x:Name="table_monthly_park_list">
+                    <!-- Table head -->
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        CornerRadius="0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#cc99ff">
+                        <Label
+                            Text="Month"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        CornerRadius="0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#cc99ff">
+                        <Label
+                            Text="Total Park"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <!-- Table body -->
+                </Grid>
+            </Frame>
+            <Grid>
+                
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

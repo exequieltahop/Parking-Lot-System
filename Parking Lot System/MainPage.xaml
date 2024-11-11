@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parking_Lot_System.MainPage"
+             Title="Log In"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             BackgroundColor="White">
+
+    <ScrollView VerticalOptions="Center"
+                HorizontalOptions="Fill"
+                MinimumWidthRequest="100"
+                Padding="30">
+
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+              ColumnDefinitions="0.20*, 0.80*"
+              RowSpacing="0"
+              Padding="0"
+              Margin="0"
+              HorizontalOptions="Fill"
+              VerticalOptions="Start">
+
+            <Image Grid.ColumnSpan="2"
+                   Grid.Row="0"
+                   Source="dotnet_bot.png"
+                   Aspect="AspectFit"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+
+            <Entry Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Placeholder="Username"
+                   x:Name="EntryUsername"
+                   FontSize="14"
+                   VerticalOptions="Center"
+                   Margin="0, 0, 0, 20"
+                   TextColor="Black"
+                   ReturnType="Next"/>
+
+            <Entry Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   Placeholder="Password"
+                   x:Name="EntryPassword"
+                   FontSize="14"
+                   VerticalOptions="Center"
+                   IsPassword="True"
+                   TextColor="Black"
+                   ReturnType="Done"/>
+
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="3"
+                         Grid.ColumnSpan="2"
+                         Margin="0, 0, 0, 0"
+                         VerticalOptions="Start">
+
+                <CheckBox x:Name="ShowPassCheckBox"
+          VerticalOptions="Center"
+          Scale="0.8"
+          CheckedChanged="ShowPassWord"
+          Color="Black"/>
+                <!-- Set checkbox color to black -->
+
+                <Label Text="Show Password"
+       VerticalOptions="Center"
+       HorizontalOptions="Start"
+       FontSize="13"
+       TranslationX="-13"
+       TextColor="Black"/>
+                <!-- Set label text color to black -->
+
+            </StackLayout>
+
+            <Button Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    Text="Log In"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    CornerRadius="5"
+                    Margin="0, 0, 0, 15"
+                    Clicked="SignIn"
+                    x:Name="BtnSignIn"
+                    BackgroundColor="Blue"/>
+
+            <Label Grid.Row="5"
+                   Grid.ColumnSpan="2"
+                   Text="Sign Up"
+                   HorizontalOptions="Fill"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   TextDecorations="Underline"
+                   TextColor="BlueViolet">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SignUpForm"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!--<Button Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Text="Click Me"
+                    Clicked="Sample"
+                    BackgroundColor="SkyBlue"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"/>
+            <Button Grid.Row="7"
+                    Grid.ColumnSpan="2"
+                    Text="Show Session"
+                    Clicked="ShowSession"
+                    BackgroundColor="Red"
+                    TextColor="White"/>
+            <Button Grid.Row="8"
+                    Grid.ColumnSpan="2"
+                    Text="Check Session"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="CheckUsernamePreference"/>-->
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
